@@ -1,5 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Корневой контейнер второго экрана приложения (activity_second).
+    Имеет собственный уникальный ID secondLayout для независимого управления свойствами отображения в SecondActivity.kt.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +12,10 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
+    <!-- 
+        КНОПКА 1 НА ВТОРОМ ЭКРАНЕ: "Студент"
+        Выполняет ту же функцию, что и кнопка на первом экране, демонстрируя независимость контекстов вызова AlertDialog.
+    -->
     <Button
         android:id="@+id/btnStudent2"
         android:layout_width="wrap_content"
@@ -19,6 +27,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
+    <!-- 
+        КНОПКА 2 НА ВТОРОМ ЭКРАНЕ: "Назад"
+        Вызывает деструкцию текущей Activity через метод finish(), возвращая пользователя на предыдущий экран в стеке.
+    -->
     <Button
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"

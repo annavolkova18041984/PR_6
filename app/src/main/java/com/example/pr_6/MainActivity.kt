@@ -1,4 +1,4 @@
-package com.example.pr_6 // Ваш пакет
+﻿package com.example.pr_6 // Объявление уникального пакета (идентификатора) приложения
 
 import android.content.Intent // Импорт класса Intent для реализации переходов между экранами (Activity)
 import android.graphics.Color // Импорт класса Color для работы со стандартными системными цветами
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
             builder.setTitle("Студент") // Установка главного текстового заголовка модального окна
             // Формирование многострочного содержимого окна (ФИО и номер учебной группы)
-            builder.setMessage("ФИО: Голдун Михаил алексеевич\nГруппа №: 354")
+            builder.setMessage("ФИО: Голдун Михаил Алексеевич\nГруппа №: 354")
 
             // Настройка системной кнопки закрытия модального окна (кнопка "ОК")
             builder.setPositiveButton("ОК") { dialog, _ ->
