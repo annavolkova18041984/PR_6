@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Корневой контейнер первого экрана приложения.
+ID mainLayout1 необходим для того, чтобы найти этот контейнер в Kotlin-коде и программно изменить его фон.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+    КНОПКА 1: "Студент"
+    При нажатии на эту кнопку срабатывает слушатель, создающий модальное окно AlertDialog.
+    Привязана к центру экрана по горизонтали и смещена ближе к верхней части.
+    -->
+    <Button
+        android:id="@+id/btnStudent1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Студент"
+        app:layout_constraintBottom_toTopOf="@+id/btnToScreen2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!--
+    КНОПКА 2: "Экран 2"
+    Данный элемент управляет навигацией. При клике формируется явный Intent, открывающий второе окно.
+    Расположена строго под кнопкой btnStudent1 с отступом в 16dp.
+    -->
+    <Button
+        android:id="@+id/btnToScreen2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Экран 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStudent1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
